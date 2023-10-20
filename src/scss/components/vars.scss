@@ -1,0 +1,47 @@
+// Grid.
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+);
+$grid-gutter-width: 20px;
+
+// Font families.
+$ff			: Arial, sans-serif;
+$ff-title	: Arial, sans-serif;
+
+// Font sizes.
+$fs-xs	: 12px;
+$fs-sm	: 14px;
+$fs-md	: 16px;
+$fs-lg	: 18px;
+$fs-xl	: 20px;
+
+// Font weights.
+$fw-light		: 300;
+$fw-regular		: 400;
+$fw-medium		: 500;
+$fw-semibold	: 600;
+$fw-bold		: 700;
+$fw-extrabold	: 800;
+$fw-black		: 900;
+
+// Line heights.
+$lh			: 1.4;
+$lh-title	: 1.2;
+
+// Colors.
+$white	: #fff;
+$black	: #000;
+
+// Others.
+$tr		: 0.35s;
+$radius	: 5px;
