@@ -1,0 +1,14 @@
+.cta {
+	padding: 71px 0;
+	background-color: $primary;
+	color: $white;
+	text-align: center;
+
+	@include media-breakpoint-down(md) {
+		padding: 40px 0;
+	}
+
+	&-title {
+		color: $white;
+	}
+}

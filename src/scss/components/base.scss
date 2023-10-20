@@ -11,7 +11,7 @@ body {
 	font-family: $ff;
 	font-size: $fs-md;
 	line-height: $lh;
-	color: $black;
+	color: $grey;
 	background-color: $white
 }
 
@@ -33,70 +33,37 @@ img {
 	}
 }
 
-/*************************/
-/* Styles for WP content */
-/*************************/
-.page-content {
-	clear: both;
-
-	&::after{
-		display: block;
-		content: '';
-		clear: both
-	}
+// Usage
+.container,
+.container-fluid {
+	@include make-container();
 }
 
-.aligncenter {
-	text-align: center
-}
-
-.alignleft {
-	text-align: left
-}
-
-.alignright {
-	text-align: right
-}
-
-img.alignleft,
-.wp-caption.alignleft {
-	float: left;
-	margin-right: 15px
-}
-
-img.alignright,
-.wp-caption.alignright {
-	float: right;
-	margin-left: 15px
-}
-
-.wp-caption {
-	max-width: 100%;
-
-	&.aligncenter {
-		margin-left: auto;
-		margin-right: auto
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths {
+	.container-#{$breakpoint} {
+		@extend .container-fluid;
 	}
 
-	&-text {
-		font-family: $ff;
-		font-size: 18px
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		%responsive-container-#{$breakpoint} {
+			max-width: $container-max-width;
+		}
+
+		// Extend each breakpoint which is smaller or equal to the current breakpoint
+		$extend-breakpoint: true;
+
+		@each $name, $width in $grid-breakpoints {
+			@if ($extend-breakpoint) {
+				.container#{breakpoint-infix($name, $grid-breakpoints)} {
+					@extend %responsive-container-#{$breakpoint};
+				}
+
+				// Once the current breakpoint is reached, stop extending
+				@if ($breakpoint == $name) {
+					$extend-breakpoint: false;
+				}
+			}
+		}
 	}
 }
-
-@media all and (max-width: 575px) {
-	img.alignleft,
-	.wp-caption.alignleft {
-		float: none;
-		margin-right: 0
-	}
-
-	img.alignright,
-	.wp-caption.alignright {
-		float: none;
-		margin-left: 0
-	}
-}
-/*************************************/
-/* /End of the Styles for WP content */
-/*************************************/

@@ -1,0 +1,51 @@
+.hero {
+	padding: 116px 0 70px;
+	background-color: $light-bg;
+	position: relative;
+
+	@include media-breakpoint-down(md) {
+		padding: 50px 0 30px;
+	}
+
+	&-bg {
+		position: absolute;
+		top: 50%;
+		transform: translateY(calc(-50% + 12px));
+		right: 0;
+		max-width: 40%;
+
+		@include media-breakpoint-down(sm) {
+			position: static;
+			transform: none;
+			max-width: 80%;
+			margin: 25px 0 0 auto;
+		}
+	}
+
+	&-inner {
+
+		@include media-breakpoint-up(md) {
+			max-width: 50%;
+		}
+	}
+
+	&-label {
+		padding: 8px 16px;
+		color: $grey;
+		font-weight: $fw-bold;
+		background-color: $white;
+		border-radius: 53px;
+		font-size: $fs-xs;
+		margin-bottom: 15px;
+		display: inline-block;
+	}
+
+	&-desc {
+		margin-bottom: 15px;
+		color: $grey;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

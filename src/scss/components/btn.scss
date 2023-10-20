@@ -1,0 +1,26 @@
+.btn {
+	border-radius: 8px;
+	background-color: $primary;
+	color: $white;
+	font-size: $fs-xs;
+	text-decoration: none;
+	padding: 8px 16px;
+	transition: background-color $tr;
+
+	&:hover {
+		background-color: darken($primary, 10%);
+		color: $white;
+	}
+
+	&--white {
+		background-color: $white;
+		color: $primary;
+		transition: opacity $tr;
+
+		&:hover {
+			opacity: 0.85;
+			background-color: $white;
+			color: $primary;
+		}
+	}
+}

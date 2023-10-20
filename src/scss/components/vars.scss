@@ -10,38 +10,34 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
+	xl: 1180px
 );
 $grid-gutter-width: 20px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff: "Roboto", sans-serif;
 
 // Font sizes.
-$fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-xs: 13px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 18px;
+$fs-xl: 20px;
 
 // Font weights.
-$fw-light		: 300;
-$fw-regular		: 400;
-$fw-medium		: 500;
-$fw-semibold	: 600;
-$fw-bold		: 700;
-$fw-extrabold	: 800;
-$fw-black		: 900;
+$fw-regular: 400;
+$fw-bold: 700;
 
 // Line heights.
-$lh			: 1.4;
-$lh-title	: 1.2;
+$lh: 1.5;
 
 // Colors.
-$white	: #fff;
-$black	: #000;
+$white: #fff;
+$black: #252E37;
+$grey: #8f9bb3;
+$primary: #00A1FF;
+$light-bg: #F8FAFB;
 
 // Others.
-$tr		: 0.35s;
-$radius	: 5px;
+$tr: 0.35s;
+$radius: 6px;

@@ -3,13 +3,11 @@
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
 @import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/animate.css/animate.css';
 
 // Theme components.
 @import 'components/vars';
 @import 'components/typography';
-
-// Theme base styles.
-@import 'components/base';
 
 // Theme common styles.
 @import 'common/header/header';
@@ -17,5 +15,12 @@
 @import 'common/footer/footer';
 @import 'common/footer/menu';
 
-// Other styles. Please headline each group of your custom styles, for example:
-// ACF Flexible content styles.
+// Theme base styles.
+@import 'components/base';
+@import 'components/btn';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/advantages';
+@import 'components/cta';
+
+
